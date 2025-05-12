@@ -9,6 +9,8 @@ public class App {
 
         if(score >= 90)
             System.out.println("A학점");
+        else
+            System.out.println("A학점이 아닙니다.");
         
         // if(score >= 90){
         //     System.out.println("A학점");
