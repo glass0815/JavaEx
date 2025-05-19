@@ -1,6 +1,7 @@
-package com.$03Interface.order;
+package com.$04Interface.order;
 
 public class CarTest {
+    private final int TEST_SCORE = 50;
     private int test_num;
     private ICar car;
 
@@ -14,29 +15,37 @@ public class CarTest {
         this.test_num = 3;
     }
 
-    public void onOffTest(){
+    private int getTestScore(){
+        // 50이상 99이하
+        return (int)(Math.random() * TEST_SCORE) + TEST_SCORE;
+    }
+
+    public int onOffTest(){
         for (int i = 0; i < this.test_num; i++) {
             car.turnOn();
             car.turnOff();
         }
+        return getTestScore();
     }
 
-    public void speedTest(){
+    public int speedTest(){
         for (int i = 0; i < this.test_num; i++) {
             car.accel();
             car.accel();
             car.accel();
         }
+        return getTestScore();
     }
 
-    public void footBreakTest(){
+    public int footBreakTest(){
         for (int i = 0; i < this.test_num; i++) {
             car.accel();
             car.footBreak();
         }
+        return getTestScore();
     }
 
-    public void driveTest(){
+    public int driveTest(){
         for (int i = 0; i < this.test_num; i++) {
             car.turnOn();
             car.accel();
@@ -45,6 +54,7 @@ public class CarTest {
             car.footBreak();
             car.turnOff();
         }
+        return getTestScore();
     }
 
     public int getTest_num() {

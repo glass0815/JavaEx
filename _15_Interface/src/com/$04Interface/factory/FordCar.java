@@ -1,7 +1,7 @@
-package com.$03Interface.factory;
+package com.$04Interface.factory;
 
 // 다른 패키지에 있는 선언을 접근할 때
-import com.$03Interface.order.*;
+import com.$04Interface.order.*;
 
 public class FordCar extends ParentCar {
 
